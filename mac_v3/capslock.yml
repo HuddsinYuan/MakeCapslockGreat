@@ -97,11 +97,11 @@ rules:
       #   from: { key_code: h, modifiers: { mandatory: [ left_shift,left_command,  right_command,right_control,right_shift,right_option ] } }
       #   to: [ { mouse_key: { horizontal_wheel: 128 } } ]
 
-      # # normal: cursor move
-      # - description: ' h = left'
-      #   type: basic
-      #   from: { key_code: h, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-      #   to: [ { key_code: left_arrow } ]
+      # normal: cursor move
+      - description: ' h = left'
+        type: basic
+        from: { key_code: h, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: left_arrow } ]
 
 
       #==========================================================#
@@ -155,11 +155,11 @@ rules:
       #   from: { key_code: j, modifiers: { mandatory: [ left_shift,left_command,  right_command,right_control,right_shift,right_option ] } }
       #   to: [ { mouse_key: { vertical_wheel: 128 } } ]
 
-      # # normal: cursor move
-      # - description: ' j = down'
-      #   type: basic
-      #   from: { key_code: j, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-      #   to: [ { key_code: down_arrow } ]
+      # normal: cursor move
+      - description: ' j = down'
+        type: basic
+        from: { key_code: j, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: down_arrow } ]
 
 
       #==========================================================#
@@ -213,11 +213,11 @@ rules:
       #   from: { key_code: k, modifiers: { mandatory: [ left_shift,left_command,  right_command,right_control,right_shift,right_option ] } }
       #   to: [ { mouse_key: { vertical_wheel: -128 } } ]
 
-      # # normal: cursor move
-      # - description: ' k = up'
-      #   type: basic
-      #   from: { key_code: k, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-      #   to: [ { key_code: up_arrow } ]
+      # normal: cursor move
+      - description: ' k = up'
+        type: basic
+        from: { key_code: k, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: up_arrow } ]
 
 
       #==========================================================#
@@ -271,11 +271,11 @@ rules:
       #   from: { key_code: l, modifiers: { mandatory: [ left_shift,left_command,  right_command,right_control,right_shift,right_option ] } }
       #   to: [ { mouse_key: { horizontal_wheel: -128 } } ]
 
-      # # normal: cursor move
-      # - description: ' l = right'
-      #   type: basic
-      #   from: { key_code: l, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-      #   to: [ { key_code: right_arrow } ]
+      # normal: cursor move
+      - description: ' l = right'
+        type: basic
+        from: { key_code: l, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: right_arrow } ]
 
 
 
@@ -301,9 +301,9 @@ rules:
       #   to: [ { key_code: hyphen , modifiers: [ left_command,left_option ] } ]
 
       # control: desktop management
-      - description: 'control + u = ctrl + command + f (fullscreen)'
+      - description: 'command + f = ctrl + command + f (fullscreen)'
         type: basic
-        from: { key_code: u, modifiers: { mandatory: [ left_control ,right_command,right_control,right_shift,right_option ] } }
+        from: { key_code: f, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
         to: [ { key_code: f , modifiers: [ left_control,left_command ] } ]
 
       # # option: mouse left click
@@ -360,10 +360,10 @@ rules:
       #   to: [ { key_code: grave_accent_and_tilde , modifiers: [ left_command,left_shift ] } ]
 
       # control: desktop management
-      - description: 'control + i = command + h (hide current window)'
-        type: basic
-        from: { key_code: i, modifiers: { mandatory: [ left_control ,right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: h , modifiers: [ left_command ] } ]
+      # - description: 'control + i = command + h (hide current window)'
+      #   type: basic
+      #   from: { key_code: i, modifiers: { mandatory: [ left_control ,right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { key_code: h , modifiers: [ left_command ] } ]
 
       # # option: mouse right click
       # - description: 'option + i = mouse right click'
@@ -476,10 +476,10 @@ rules:
       #   to: [ { key_code: equal_sign , modifiers: [ left_command,left_option ] } ]
 
       # control: desktop management
-      - description: 'control + p = LaunchPad'
-        type: basic
-        from: { key_code: p, modifiers: { mandatory: [ left_control ,right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a 'Launchpad' } ]
+      # - description: 'control + p = LaunchPad'
+      #   type: basic
+      #   from: { key_code: p, modifiers: { mandatory: [ left_control ,right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { shell_command: open -a 'Launchpad' } ]
 
       # # option: mouse forward
       # - description: 'option + p = mouse forward'
@@ -1156,15 +1156,15 @@ rules:
       #==========================================================#
       # ( q ) --> exit                                           #
       #==========================================================#
-      - description: 'control + q = lock screen'
+      - description: 'command + l = lock screen'
         type: basic
-        from: { key_code: q, modifiers: { mandatory: [ left_control,  right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: q , modifiers: [ left_control,left_command ] } ]
+        from: { key_code: l, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
+        to: [ { key_code: q , modifiers: [ left_command,left_control ] } ]
 
-      - description: 'shift + q = logout'
-        type: basic
-        from: { key_code: q, modifiers: { mandatory: [ left_shift,  right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: q , modifiers: [ left_shift,left_command ] } ]
+      # - description: 'shift + q = logout'
+      #   type: basic
+      #   from: { key_code: q, modifiers: { mandatory: [ left_shift,  right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { key_code: q , modifiers: [ left_shift,left_command ] } ]
 
       - description: 'command + q = force close app'
         type: basic
@@ -1206,12 +1206,7 @@ rules:
       #==========================================================#
       # ( a ) --> window management                              #
       #==========================================================#
-      # - description: 'control + a = launchpad'
-      #   type: basic
-      #   from: { key_code: a, modifiers: { mandatory: [ left_control,  right_command,right_control,right_shift,right_option ] } }
-      #   to: [ { shell_command: open -a 'Launchpad' } ]
-
-      # - description: 'option + a = show desktop'
+            # - description: 'option + a = show desktop'
       #   type: basic
       #   from: { key_code: a, modifiers: { mandatory: [ left_option,  right_command,right_control,right_shift,right_option ] } }
       #   to: [ { key_code: f11 } ]
@@ -1260,9 +1255,9 @@ rules:
       #==========================================================#
       # ( e ) --> chrome / finder / mail                         #
       #==========================================================#
-      - description: 'command + e = finder'
+      - description: 'f = finder'
         type: basic
-        from: { key_code: e, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        from: { key_code: f, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
         to: [ { shell_command: open -a finder } ]
 
       # - description: 'option + e = mail'
@@ -1270,9 +1265,9 @@ rules:
       #   from: { key_code: e, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
       #   to: [ { shell_command: open -a mail } ]
 
-      - description: 'e = chrome'
+      - description: 'x = chrome'
         type: basic
-        from: { key_code: e, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        from: { key_code: x, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
         to: [ { shell_command: open -a Google\ Chrome } ]
 
 
@@ -1294,9 +1289,9 @@ rules:
         from: { key_code: r, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
         to: [ { shell_command: open -a iTerm } ]
 
-      - description: 'command + r = 腾讯文档'
+      - description: 'g = 腾讯文档'
         type: basic
-        from: { key_code: r, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+        from: { key_code: g, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
         to: [ { shell_command: open -a 腾讯文档 } ]
 
       #==========================================================#
@@ -1338,10 +1333,16 @@ rules:
       #==========================================================#
       # ( f ) --> alfred 4 / Dash / Dictionary                   #
       #==========================================================#
-      - description: 'command + f = Dash'
+      # - description: 'command + f = Dash'
+      #   type: basic
+      #   from: { key_code: f, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { shell_command: open -a Dash } ]
+
+      - description: 'z = launchpad'
         type: basic
-        from: { key_code: f, modifiers: { mandatory: [ left_command, right_command,right_control,right_shift,right_option ] } }
-        to: [ { shell_command: open -a Dash } ]
+        from: { key_code: z, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a 'Launchpad' } ]
+
 
       # - description: 'option + f = Dictionary'
       #   type: basic
@@ -1379,10 +1380,9 @@ rules:
   ################################################################
   - description: Hyper Terminal
     manipulators:
-
-      - description: 'command + d = ctrl-e(EOF)'
+      - description: 'e = ctrl-e (EOF)'
         type: basic
-        from: { key_code: d, modifiers: { mandatory: [ left_command,  right_command,right_control,right_shift,right_option ] } }
+        from: { key_code: e, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
         to: [ { key_code: e , modifiers: [ left_control ] } ]
 
       - description: 'd = ctrl-d (EOF)'
