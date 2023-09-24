@@ -2,7 +2,6 @@
 
 
 
-### MacOS Installation
 
 
 Capslock serves via  [**Karabiner-Elements**](https://karabiner-elements.pqrs.org/)  on MacOS
