@@ -159,6 +159,32 @@ CapsLock & c:: Send, ^c                                                ;|
 CapsLock & d:: Send, ^d                                                ;|
 CapsLock & e:: Send, ^e                                                ;|
 CapsLock & v:: Send, ^v                                                ;|
+CapsLock & w:: Send, ^w                                                ;|
+
+; Secondary Leader Key
+CapsLock & b:: 
+    prevCaseSense := A_StringCaseSense
+    StringCaseSense, On
+
+    Input, pressedKey, L1 T0.8 E
+    switch pressedKey
+    {
+    case "x": Send, ^!+M ; MAA
+    case "s": Send, ^s   ; Ctrl+s
+    case "q": Send, ^!w
+    case "w": Send, +!w
+    ; case "s": ToggleXimalaya()
+    ; case "X": ActivateWindowByProcName("XMind.exe")
+    ; case "f": ActivateWindowByProcName("Q-Dir.exe")
+    ; case "e": ActivateWindowByProcName("emacs.exe")
+
+    default:
+        ToolTipMgr.ShowTooltip({text:"Unrecognized key <" . pressedKey . "> pressed"})
+    }
+
+    StringCaseSense, %prevCaseSens%
+return
+return
 
 ; CapsLock & r:: Run D:\Soft\XMind_ZEN\XMind.exe                       ;|
 ; CapsLock & r:: ActivateWindowByProcName("XMind.exe")                 ;|
@@ -181,4 +207,4 @@ return                                                               ;|
 
 
 
-; ---------------------------------------------------------------------o
+; ---------------------------------------------------------------------
