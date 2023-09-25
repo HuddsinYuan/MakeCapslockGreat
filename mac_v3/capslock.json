@@ -864,6 +864,26 @@
           ]
         },
         {
+          "description": "y = XMind",
+          "type": "basic",
+          "from": {
+            "key_code": "y",
+            "modifiers": {
+              "mandatory": [
+                "right_command",
+                "right_control",
+                "right_shift",
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "shell_command": "open -a XMind"
+            }
+          ]
+        },
+        {
           "description": "z = launchpad",
           "type": "basic",
           "from": {
@@ -1796,29 +1816,6 @@
               "key_code": "0",
               "modifiers": [
                 "left_shift"
-              ]
-            }
-          ]
-        },
-        {
-          "description": "backslash \\ = command + / (comment)",
-          "type": "basic",
-          "from": {
-            "key_code": "backslash",
-            "modifiers": {
-              "mandatory": [
-                "right_command",
-                "right_control",
-                "right_shift",
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "slash",
-              "modifiers": [
-                "left_command"
               ]
             }
           ]

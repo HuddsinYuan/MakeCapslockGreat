@@ -1325,10 +1325,10 @@ rules:
       #   from: { key_code: y, modifiers: { mandatory: [ left_option, right_command,right_control,right_shift,right_option ] } }
       #   to: [ { shell_command: open -a amphetamine } ]
 
-      # - description: 'y = Siri'
-      #   type: basic
-      #   from: { key_code: y, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-      #   to: [ { shell_command: open -a Siri } ]
+      - description: 'y = XMind'
+        type: basic
+        from: { key_code: y, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+        to: [ { shell_command: open -a XMind } ]
 
       #==========================================================#
       # ( f ) --> alfred 4 / Dash / Dictionary                   #
@@ -1679,10 +1679,10 @@ rules:
       #==========================================================#
       # slash/backslash to comment
       #==========================================================#
-      - description: 'backslash \ = command + / (comment)'
-        type: basic
-        from: { key_code: backslash, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
-        to: [ { key_code: slash , modifiers: [ left_command ] } ]
+      # - description: 'backslash \ = command + / (comment)'
+      #   type: basic
+      #   from: { key_code: backslash, modifiers: { mandatory: [ right_command,right_control,right_shift,right_option ] } }
+      #   to: [ { key_code: slash , modifiers: [ left_command ] } ]
 
       - description: 'slash / = command + / (comment)'
         type: basic
