@@ -173,6 +173,23 @@ CapsLock & b::
     case "s": Send, ^s   ; Ctrl+s
     case "q": Send, ^!w
     case "w": Send, +!w
+    case "e": Send, ^+e
+
+    case "n":
+        Send, ^\
+        Sleep, 50
+        Send, ^n
+
+    case "l": 
+        Send, ^k
+        Sleep, 50
+        Send, ^{PgDn}
+
+    case "h": 
+        Send, ^k
+        Sleep, 50
+        Send, ^{PgUp}
+
     ; case "s": ToggleXimalaya()
     ; case "X": ActivateWindowByProcName("XMind.exe")
     ; case "f": ActivateWindowByProcName("Q-Dir.exe")
